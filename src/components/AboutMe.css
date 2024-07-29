@@ -1,0 +1,68 @@
+body{
+  background: rgb(19,21,77);
+  background: linear-gradient(90deg, rgba(19,21,77,1) 50%, rgba(142,146,238,1) 100%);
+  
+}
+
+.about-me {
+  text-align: center;
+  padding: 2rem;
+  color: white;
+}
+
+.about-me h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.about-me p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; 
+}
+
+.profile-picture {
+
+  padding: 1rem; 
+  border-radius: 10px; 
+}
+
+.profile-picture img {
+  width: 300px; 
+  height: auto;
+  border-radius: 10px; 
+}
+
+.profile-info {
+  text-align: left;
+}
+
+.profile-info h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-info p {
+  font-size: 1.2rem;
+}
+
+h3{
+  color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  .profile-picture img{
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+    transition: 1s ease-in-out;
+  }
+}

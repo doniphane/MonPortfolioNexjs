@@ -1,0 +1,159 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+
+}
+
+
+
+h2{
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+h3{
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #050505;
+  margin-bottom: 10px;
+  text-align: center; 
+}
+
+.descrition{
+  font-size: 1vw;
+}
+
+.projects {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.mySwiper {
+  padding: 20px 0;
+}
+
+.swiper-button-next, .swiper-button-prev {
+display: none;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+}
+.project-card {
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #fff;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.project-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  aspect-ratio: 16 / 9;
+}
+
+.btn-github {
+  background-color: #8E92EE;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  display: block; 
+  margin: 10px auto; 
+
+}
+
+.btn-github:hover {
+  background-color: #777adc;
+}
+
+.language{
+  font-size: 1em;
+  font-weight: bold;
+  color: #333;
+  border-radius: 5px;
+  padding: 5px 10px;
+ border: 1px solid #fff;
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 10px;
+ 
+}
+
+.language2{
+  font-size: 1em;
+  font-weight: bold;
+  color: #333;
+  border-radius: 5px;
+  padding: 5px 10px;
+ border: 1px solid #fff;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+  .title{
+  font-size: 1em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+
+@media (max-width: 640px) {
+  .project-card {
+    width: 300px;
+    height: 100%;
+      padding: 10px;
+      font-size: 0.9em;
+  }
+}
+
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  .project-card {
+      padding: 15px;
+      font-size: 1em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-card {
+      padding: 20px;
+      font-size: 1.1em;
+  }
+}
+
+
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  .language, .language2 {
+    font-size: 0.9em;
+    padding: 4px 9px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .language, .language2 {
+    font-size: 1em;
+    padding: 5px 10px;
+  }
+}
