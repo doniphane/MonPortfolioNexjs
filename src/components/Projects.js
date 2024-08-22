@@ -8,11 +8,12 @@ import { Pagination, Navigation } from 'swiper/modules';
 import './Projects.css';
 
 const initialProjects = [
-    { title: 'Tropizzcartour', description: 'Site fictif de location de voiture', Language: '#PHP', Language2: '#MYSQL', githubLink: 'https://github.com/doniphane/Tropizcartours', image: `${process.env.PUBLIC_URL}/4.png` },
-    { title: 'Cybergardien', description: 'Projet fictif pour une association', Language: '#HTML', Language2: '#CSS', githubLink: 'https://github.com/doniphane/Cyber-Gardien-Projet-Assos-Fictif-', image: `${process.env.PUBLIC_URL}/5.png` },
-    { title: 'Thermos', description: 'Projet de récupération de température via une API', Language: '#HTML', Language2: '#CSS', githubLink: 'https://github.com/doniphane/Thermos', image: `${process.env.PUBLIC_URL}/6.png` }, 
-    { title: 'RestCountry', description: 'Récupération du nombre de drapeaux via une API', Language: '#HTML ', Language2: '#CSS', githubLink: 'https://github.com/doniphane/FLag', image: `${process.env.PUBLIC_URL}/7.png` },
-    { title: 'Project 6', description: 'À venir', githubLink: 'lien_github_project_6', image: `${process.env.PUBLIC_URL}/11.jpg` }, 
+    { title: 'Calendrier Interactif', description: 'Projet Agenda Web - Calendrier Interactif', Language: '#HTML ', Language2: '#CSS', Language3: '#JS', Language4: '#PHP', githubLink: 'https://github.com/doniphane/Agenda', image: `${process.env.PUBLIC_URL}/11.png` },
+    { title: 'Tropizzcartour', description: 'Site fictif de location de voiture', Language: '#PHP', Language2: '#MYSQL', Language3: '#JS', Language4: '#Tailwind css', githubLink: 'https://github.com/doniphane/Tropizcartours', image: `${process.env.PUBLIC_URL}/4.png` },
+    { title: 'Cybergardien', description: 'Projet fictif pour une association', Language: '#HTML', Language2: '#CSS', Language3: '#JS', githubLink: 'https://github.com/doniphane/Cyber-Gardien-Projet-Assos-Fictif-', image: `${process.env.PUBLIC_URL}/5.png` },
+    { title: 'Thermos', description: 'Projet de récupération de température via une API', Language: '#HTML', Language2: '#CSS', Language3: '#JS', githubLink: 'https://github.com/doniphane/Thermos', image: `${process.env.PUBLIC_URL}/6.png` }, 
+    { title: 'RestCountry', description: 'Récupération du nombre de drapeaux via une API', Language: '#HTML ', Language2: '#CSS', Language3: '#JS', githubLink: 'https://github.com/doniphane/FLag', image: `${process.env.PUBLIC_URL}/7.png` },
+   
 ];
 
 const Projects = () => {
@@ -53,6 +54,8 @@ const Projects = () => {
                                 <p className="description">{project.description}</p>
                                 <p className="language">{project.Language}</p>
                                 <p className="language">{project.Language2}</p>
+                                <p className="language">{project.Language3}</p>
+                                <p className="language">{project.Language4}</p>
                                 <Link to={project.githubLink} target="_blank" rel="noopener noreferrer">
                                     <button className="btn-github">Voir sur GitHub</button>
                                 </Link>

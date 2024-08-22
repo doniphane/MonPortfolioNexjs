@@ -40,7 +40,7 @@
   background-color: #fff;
   text-align: left;
   transition: transform 0.3s ease;
-  max-width: 100%; /* S'assurer que la carte ne dépasse pas la largeur */
+  max-width: 100%; 
 }
 
 .project-card:hover {
@@ -74,13 +74,13 @@
 .language {
   font-size: 1em;
   font-weight: bold;
-  color: #333;
+  color: #074dd8;
   border-radius: 5px;
   padding: 5px 10px;
-  border: 1px solid #fff;
   display: inline-block;
   margin-top: 10px;
   margin-right: 10px;
+  border: #0393e0 1px solid;
 }
 
 .custom-navigation {
@@ -125,6 +125,7 @@ h3{
     padding: 10px;
     font-size: 0.9em;
   }
+
 }
 
 @media (min-width: 641px) and (max-width: 1023px) {
