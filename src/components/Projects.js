@@ -8,12 +8,13 @@ import { Pagination, Navigation } from 'swiper/modules';
 import './Projects.css';
 
 const initialProjects = [
+    { title: 'RandomUser', description: 'Récupération du nombre de user via une API projet réaliser en formation', Language: '#HTML ', Language2: '#CSS', Language3: '#JS', githubLink: 'https://doniphane.github.io/Randomuser-api/', image: `${process.env.PUBLIC_URL}/12.png` },
     { title: 'Calendrier Interactif', description: 'Projet Agenda Web - Calendrier Interactif', Language: '#HTML ', Language2: '#CSS', Language3: '#JS', Language4: '#PHP', githubLink: 'https://github.com/doniphane/Agenda', image: `${process.env.PUBLIC_URL}/11.png` },
     { title: 'Tropizzcartour', description: 'Site fictif de location de voiture', Language: '#PHP', Language2: '#MYSQL', Language3: '#JS', Language4: '#Tailwind css', githubLink: 'https://github.com/doniphane/Tropizcartours', image: `${process.env.PUBLIC_URL}/4.png` },
     { title: 'Cybergardien', description: 'Projet fictif pour une association', Language: '#HTML', Language2: '#CSS', Language3: '#JS', githubLink: 'https://github.com/doniphane/Cyber-Gardien-Projet-Assos-Fictif-', image: `${process.env.PUBLIC_URL}/5.png` },
-    { title: 'Thermos', description: 'Projet de récupération de température via une API', Language: '#HTML', Language2: '#CSS', Language3: '#JS', githubLink: 'https://github.com/doniphane/Thermos', image: `${process.env.PUBLIC_URL}/6.png` }, 
+    { title: 'Thermos', description: 'Projet de récupération de température via une API', Language: '#HTML', Language2: '#CSS', Language3: '#JS', githubLink: 'https://github.com/doniphane/Thermos', image: `${process.env.PUBLIC_URL}/6.png` },
     { title: 'RestCountry', description: 'Récupération du nombre de drapeaux via une API', Language: '#HTML ', Language2: '#CSS', Language3: '#JS', githubLink: 'https://github.com/doniphane/FLag', image: `${process.env.PUBLIC_URL}/7.png` },
-   
+
 ];
 
 const Projects = () => {
