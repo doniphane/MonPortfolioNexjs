@@ -8,6 +8,7 @@ import { Pagination, Navigation } from 'swiper/modules';
 import './Projects.css';
 
 const initialProjects = [
+    { title: '🎥 Vidéothèque Ghibli ', description: 'Récupération des flim  via une API projet réaliser en formation', Language: '#HTML ', Language2: '#tailwind CSS', Language3: '#JS', githubLink: 'https://doniphane.github.io/Ma-videotech/', githubLink2: 'https://github.com/doniphane/Ma-videotech', image: `${process.env.PUBLIC_URL}/13.png` },
     { title: 'RandomUser', description: 'Récupération du nombre de user via une API projet réaliser en formation', Language: '#HTML ', Language2: '#CSS', Language3: '#JS', githubLink: 'https://doniphane.github.io/Randomuser-api/', githubLink2: 'https://github.com/doniphane/Randomuser-api', image: `${process.env.PUBLIC_URL}/12.png` },
     { title: 'Calendrier Interactif', description: 'Projet Agenda Web - Calendrier Interactif', Language: '#HTML ', Language2: '#CSS', Language3: '#JS', Language4: '#PHP', githubLink: 'https://github.com/doniphane/Agenda', image: `${process.env.PUBLIC_URL}/11.png` },
     { title: 'Tropizzcartour', description: 'Site fictif de location de voiture', Language: '#PHP', Language2: '#MYSQL', Language3: '#JS', Language4: '#Tailwind css', githubLink: 'https://github.com/doniphane/Tropizcartours', image: `${process.env.PUBLIC_URL}/4.png` },
