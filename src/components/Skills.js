@@ -1,54 +1,51 @@
 import React from 'react';
-import './Skills.css'; // Fichier de styles CSS
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import du composant FontAwesomeIcon
-import { faHtml5, faCss3Alt, faJs, faReact, faNodeJs, faWordpress, faLinux, faWindows } from '@fortawesome/free-brands-svg-icons'; // Icônes de marques
-import { faDatabase, faLeaf } from '@fortawesome/free-solid-svg-icons'; // Icônes solid
+import './Skills.css';
+import {
+  AcademicCapIcon,
+  CodeBracketIcon,
+  ServerStackIcon,
+  WindowIcon,
+  DevicePhoneMobileIcon
+} from '@heroicons/react/24/solid';
 
-// Tableau des compétences avec leurs icônes et catégories
 const skills = [
-  { name: 'HTML', icon: faHtml5, category: 'Front-end' },
-  { name: 'CSS', icon: faCss3Alt, category: 'Front-end' },
-  { name: 'JavaScript', icon: faJs, category: 'Front-end' },
-  { name: 'React.js', icon: faReact, category: 'Front-end' },
-  { name: 'Node.js', icon: faNodeJs, category: 'Back-end' },
-  { name: 'MySQL', icon: faDatabase, category: 'Back-end' },
-  { name: 'MongoDB', icon: faLeaf, category: 'Back-end' },
-  { name: 'WordPress', icon: faWordpress, category: 'CMS' },
-  { name: 'Linux', icon: faLinux, category: 'Divers' },
-  { name: 'Windows', icon: faWindows, category: 'Divers' }
+  { name: 'HTML', icon: <AcademicCapIcon className="icon" />, category: 'Front-end', description: 'Compétence que je maîtrise pleinement, consolidée par mes projet Réalisé.' },
+  { name: 'CSS', icon: <CodeBracketIcon className="icon" />, category: 'Front-end', description: 'Compétence que je maîtrise pleinement, consolidée par mes projet Réalisé.' },
+  { name: 'JavaScript', icon: <CodeBracketIcon className="icon" />, category: 'Front-end', description: 'Compétence que je maîtrise pleinement, consolidée par mes projet Réalisé.' },
+  { name: 'React.js', icon: <WindowIcon className="icon" />, category: 'Front-end', description: 'Compétence actuellement en cours d apprentissage.' },
+  { name: 'Node.js', icon: <ServerStackIcon className="icon" />, category: 'Back-end', description: 'Compétence actuellement en cours d apprentissage.' },
+  { name: 'PHP', icon: <CodeBracketIcon className="icon" />, category: 'Back-end', description: 'Compétence que je maîtrise pleinement, consolidée par mes projet Réalisé.' },
+  { name: 'MySQL', icon: <ServerStackIcon className="icon" />, category: 'Back-end', description: 'Compétence que je maîtrise pleinement, consolidée par mes projet Réalisé.' },
+  { name: 'MongoDB', icon: <ServerStackIcon className="icon" />, category: 'Back-end', description: 'Compétence actuellement en cours d apprentissage.' },
+  { name: 'Linux', icon: <DevicePhoneMobileIcon className="icon" />, category: 'Divers', description: 'Compétence que je maîtrise pleinement, consolidée par mes projet Réalisé.' },
+  { name: 'Windows', icon: <DevicePhoneMobileIcon className="icon" />, category: 'Divers', description: 'Compétence que je maîtrise pleinement, consolidée par mes projet Réalisé.' },
+  { name: 'Wordpress', icon: <DevicePhoneMobileIcon className="icon" />, category: 'Divers', description: 'Compétence que je maîtrise pleinement, consolidée par mes projet Réalisé.' },
+  { name: 'Symphony', icon: <DevicePhoneMobileIcon className="icon" />, category: 'Back-end', description: 'Compétence actuellement en cours d apprentissage.' },
 ];
 
+const categories = ['Front-end', 'Back-end', 'Divers'];
+
 const Skills = () => {
-  // Fonction pour regrouper les compétences par catégorie
-  const groupByCategory = () => {
-    return skills.reduce((acc, skill) => {
-      acc[skill.category] = acc[skill.category] || [];
-      acc[skill.category].push(skill);
-      return acc;
-    }, {});
-  };
-
-  // Récupérer les compétences groupées par catégorie
-  const skillsByCategory = groupByCategory();
-
   return (
-    <div className="skills">
-      <h2>Compétences</h2>
-      <div className="skills-container">
-        {Object.keys(skillsByCategory).map(category => (
-          <div key={category} className="category">
+    <div className="skills-timeline">
+   <h2>Ce que je maîtrise aujourd’hui en développement</h2>
+
+      <div className="timeline-columns">
+        {categories.map(category => (
+          <div key={category} className="timeline-column">
             <h3>{category}</h3>
-            <div className="cards">
-              {skillsByCategory[category].map((skill, index) => (
-                <div key={index} className="card">
-                  <div className="card-icon">
-                    <FontAwesomeIcon icon={skill.icon} size="3x" />
+            <div className="timeline-list">
+              {skills
+                .filter(skill => skill.category === category)
+                .map((skill, index) => (
+                  <div className="timeline-item" key={index}>
+                    <div className="timeline-icon">{skill.icon}</div>
+                    <div className="timeline-content">
+                      <h4>{skill.name}</h4>
+                      <p>{skill.description}</p>
+                    </div>
                   </div>
-                  <div className="card-content">
-                    <h4>{skill.name}</h4>
-                  </div>
-                </div>
-              ))}
+                ))}
             </div>
           </div>
         ))}

@@ -1,157 +1,126 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
-  scroll-behavior: smooth;
-}
-
 .projects {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  padding: 40px;
+  background-color: #f9f9f9;
   text-align: center;
 }
 
-.carteContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  justify-content: center; 
-}
-
-.mySwiper {
-  padding: 20px 0;
-  width: 100%; 
-}
-
-.swiper-slide {
-  display: flex;
-  justify-content: center; 
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #222;
 }
 
 .project-card {
-  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 500px; 
   background-color: #fff;
-  text-align: left;
-  transition: transform 0.3s ease;
-  max-width: 100%; 
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
 }
 
-.project-card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+.project-image-wrapper {
+  height: 200px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.project-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.project-content h3 {
+  font-size: 1.5rem;
   margin-bottom: 10px;
-  aspect-ratio: 16 / 9;
+  color: #333;
 }
 
-.btn-github {
-  background-color: #8E92EE;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  display: block; 
-  margin: 10px auto; 
+.description {
+  font-size: 1rem;
+  color: #666;
+  flex-grow: 1;
+  margin-bottom: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.btn-github:hover {
-  background-color: #777adc;
+.languages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 15px;
 }
 
 .language {
-  font-size: 1em;
-  font-weight: bold;
-  color: #074dd8;
-  border-radius: 5px;
+  background-color: #e0f0ff;
+  color: #0077cc;
+  font-size: 0.85rem;
   padding: 5px 10px;
-  display: inline-block;
-  margin-top: 10px;
-  margin-right: 10px;
-  border: #0393e0 1px solid;
+  border-radius: 20px;
+  font-weight: 500;
 }
 
-.custom-navigation {
+.project-buttons {
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
 }
 
-.custom-swiper-button-prev, .custom-swiper-button-next {
-  background-color: #0393e0;
+.btn-github {
+  background-color: #0077cc;
   color: #fff;
+  padding: 10px 15px;
   border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
+  border-radius: 8px;
   cursor: pointer;
-  margin: 0 10px;
+  font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
-.custom-swiper-button-prev:hover, .custom-swiper-button-next:hover {
-  background-color: #777adc;
+.btn-github:hover {
+  background-color: #005fa3;
 }
 
-h2{
-  color: #fff;
-  font-size: 2rem;
+.custom-navigation {
+  margin-top: 20px;
 }
 
-h3{
-  font-size: 2rem;
-  text-align: center;
+.custom-swiper-button-prev,
+.custom-swiper-button-next {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  margin: 0 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
-@media (max-width: 640px) {
-  .swiper-slide {
-    width: 100%; 
-  }
-
-  .project-card {
-    width: 90%; 
-    padding: 10px;
-    font-size: 0.9em;
-  }
-
-}
-
-@media (min-width: 641px) and (max-width: 1023px) {
-  .project-card {
-    padding: 15px;
-    font-size: 1em;
-  }
-}
-
-@media (min-width: 1024px) {
-  .project-card {
-    padding: 20px;
-    font-size: 1.1em;
-  }
-}
-
-@media (min-width: 641px) and (max-width: 1023px) {
-  .language {
-    font-size: 0.9em;
-    padding: 4px 9px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .language {
-    font-size: 1em;
-    padding: 5px 10px;
-  }
+.custom-swiper-button-prev:hover,
+.custom-swiper-button-next:hover {
+  background-color: #005fa3;
 }

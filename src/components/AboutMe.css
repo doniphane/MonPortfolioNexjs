@@ -1,68 +1,84 @@
 body{
-  background: rgb(19,21,77);
-  background: linear-gradient(90deg, rgba(19,21,77,1) 50%, rgba(142,146,238,1) 100%);
-  
-}
+  background: linear-gradient(135deg, #f1f1f1, #ffffff);
 
+}
 .about-me {
   text-align: center;
-  padding: 2rem;
+  padding: 3rem 1rem;
   color: white;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .about-me h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #030303;
 }
 
 .about-me p {
-  font-size: 1rem;
-  margin-bottom: 2rem;
-  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #030303;
+  line-height: 1.8;
 }
 
 .profile-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem; 
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
 .profile-picture {
-
-  padding: 1rem; 
-  border-radius: 10px; 
+  padding: 1rem;
+  border-radius: 10px;
 }
 
 .profile-picture img {
-  width: 300px; 
-  height: auto;
-  border-radius: 10px; 
+  width: 280px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-picture img:hover {
+  transform: scale(1.05);
 }
 
 .profile-info {
   text-align: left;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .profile-info h3 {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #070707;
 }
 
 .profile-info p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #000000;
 }
 
-h3{
-  color: #fff;
-}
+@media only screen and (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+  }
 
-@media only screen and (max-width: 600px) {
-  .profile-picture img{
-    width: 100px;
-    height: auto;
-    border-radius: 10px;
-    transition: 1s ease-in-out;
+  .profile-picture img {
+    width: 220px;
+  }
+
+  .profile-info {
+    text-align: center;
   }
 }

@@ -7,37 +7,41 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-container">
-                <div className="footer-section">
-                    <h4>Restons en Contact</h4>
-                    <p>Vous avez des questions ou des propositions de collaboration ?</p>
+                <div className="footer-left">
+                    <h4>Restons en contact</h4>
+                    <p>
+                        Vous souhaitez me parler d'un projet, collaborer ou tout simplement échanger ?
+                        <br />N'hésitez pas à me contacter !
+                    </p>
+                    <a className="email-link" href="mailto:trulesdoniphane974@gmail.com">
+                        trulesdoniphane974@gmail.com
+                    </a>
                 </div>
-                <div className="footer-section">
-                    <h4>Contact</h4>
-                    <ul className="contact-list">
-                        <li>Email : <a href="mailto:trulesdoniphane974@gmail.com">trulesdoniphane974@gmail.com</a></li>
-                    </ul>
-                </div>
-                <div className="footer-section">
-                    <h4>Réseaux Sociaux</h4>
-                    <ul className="social-list">
+
+                <div className="footer-right">
+                    <h4>Suivez-moi</h4>
+                    <ul className="social-icons">
                         <li>
                             <a href="https://github.com/doniphane" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                                <FontAwesomeIcon icon={faGithub} className="icons-social" />
+                                <FontAwesomeIcon icon={faGithub} />
                             </a>
                         </li>
                         <li>
                             <a href="https://www.linkedin.com/in/doniphane-trules-970638318/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                                <FontAwesomeIcon icon={faLinkedin} className="icons-social" />
+                                <FontAwesomeIcon icon={faLinkedin} />
                             </a>
                         </li>
                         <li>
-                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                                <FontAwesomeIcon icon={faTwitter} className="icons-social" />
+                            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                                <FontAwesomeIcon icon={faTwitter} />
                             </a>
                         </li>
                     </ul>
-                    <p>© 2024 Doniphane Trules</p>
                 </div>
+            </div>
+
+            <div className="footer-bottom">
+                <p>© {new Date().getFullYear()} Doniphane Trules - Tous droits réservés</p>
             </div>
         </footer>
     );
